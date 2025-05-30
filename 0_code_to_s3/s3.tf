@@ -154,6 +154,10 @@ resource "aws_s3_bucket_replication_configuration" "replication" {
     filter {
       prefix = "" # Replicate all objects
     }
+	
+	delete_marker_replication {
+      status = "Enabled"
+    }
   }
 }
 
